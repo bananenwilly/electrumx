@@ -641,7 +641,7 @@ class DeserializerTxTimeSegWitNavCoin(DeserializerTxTime):
         return tx, vsize
 
 
-class DeserializerPeercoin(DeserializerTxTime):
+class DeserializerPeercoin(DeserializerTxTimeSegwit):
     def _read_witness(self, fields):
         read_witness_field = self._read_witness_field
         return [read_witness_field() for _ in range(fields)]
